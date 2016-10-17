@@ -1,0 +1,9 @@
+<div align="center">
+<%= simple_form_for @message do |f| %>
+  <%= f.label :text %>
+  <%= f.text_area :text %>
+  <%= f.input :secret_code %>
+  <%= f.input :encryption_type, collection: [ "Destroy message after the first link visit", "Destroy after 1 hour"], selected: "Destroy message after the first link visit" %>
+  <%= f.button :submit %>
+<% end %>
+</div>
